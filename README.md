@@ -39,4 +39,4 @@ Designed with simplicity and clarity in mind, this app delivers all the essentia
 
 ---
 ## 📸 Screenshots
-
+<img width="1433" alt="Image" src="https://github.com/user-attachments/assets/b1f331fa-fd67-4f4b-9026-437ec52a4bb4" />
