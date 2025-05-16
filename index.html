@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Forecast</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    </head>
+
+    <body>
+        <div class="search-box">
+            <input id="input" type="text" placeholder="Enter city name"
+                style="background-color: transparent; border: none; flex: 1; color: grey; font-size: 16px; outline: none; font-family: 'Roboto'; font-weight: 350;">
+        
+            <button id="search-btn"><i class="fi fi-br-search"></i></button>
+        </div>
+        
+        <div style="flex: 1; display: flex; max-width: 1000px; justify-content: space-around; align-items: center;">
+            <div class="forecast">
+                <div id="temperature">
+                    <p id="temp">16</p>
+                    <p style="font-size: 30px;">ºC</p>
+                </div>
+        
+                <p id="description">Storm with Rain</p>
+        
+                <div class="wind-humindity">
+                    <div class="wind" style="margin-right: 20px;">
+                        <div class="main">
+                            <i class="fi fi-br-wind"></i>
+                            <h4>Wind</h4>
+                        </div>
+                        <div class="font" id="windy">2.4km/h</div>
+                    </div>
+        
+                    <div class="humindity">
+                        <div class="main">
+                            <i class="fi fi-br-humidity"></i>
+                            <h4>Humindity</h4>
+                        </div>
+                        <div class="font" id="humindity">70%</div>
+                    </div>
+                </div>
+            </div>
+        
+            <img id="imgCur" src="images/11d.png">
+        
+            <div class="nextDays">
+                <div class="day">
+                    <img id="img0" class="imgLight" src="images/01d.png">
+                    <div style="margin-right: 20px; flex: 1;">
+                        <p id="wday0">Friday</p>
+                        <p id="wday0-description" class="font2">Sunny</p>
+                    </div>
+                    <div id="day0Tem" class="temp">18º</div>
+                </div>
+            
+                <div class="day">
+                    <img id="img1" class="imgLight" src="images/02d.png">
+                    <div style="margin-right: 20px; flex: 1;">
+                        <p id="wday1">Saturday</p>
+                        <p id="wday1-description" class="font2">Cloudy and Sunny</p>
+                    </div>
+                    <div id="day1Tem" class="temp">18º</div>
+                </div>
+            
+                <div class="day">
+                    <img id="img2" class="imgLight" src="images/03d.png">
+                    <div style="margin-right: 20px; flex: 1;">
+                        <p id="wday2">Friday</p>
+                        <p id="wday2-description" class="font2">Cloudy</p>
+                    </div>
+                    <div id="day2Tem" class="temp">18º</div>
+                </div>
+            
+                <div class="day">
+                    <img id="img3" class="imgLight" src="images/04d.png">
+                    <div style="margin-right: 20px; flex: 1;">
+                        <p id="wday3">Friday</p>
+                        <p id="wday3-description" class="font2">Sunny</p>
+                    </div>
+                    <div id="day3Tem" class="temp">18º</div>
+                </div>
+            
+                <div class="day">
+                    <img id="img4" class="imgLight" src="images/11d.png">
+                    <div style="margin-right: 20px; flex: 1;">
+                        <p id="wday4">Friday</p>
+                        <p id="wday4-description" class="font2">Rain</p>
+                    </div>
+                    <div id="day4Tem" class="temp">18º</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="chart-container">
+            <canvas id="temperatureChart"></canvas>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
